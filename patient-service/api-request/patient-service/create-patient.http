@@ -4,6 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Project Grind",
+  "email": "example@gmail.com",
   "address": "123 Main Street, New York",
   "dateOfBirth": "1999-12-09",
   "registeredDate": "2025-11-02"
