@@ -40,7 +40,7 @@ public class PatientResponseDTO {
         this.address = address;
     }
 
-    public String getDataOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
