@@ -8,6 +8,7 @@ import com.pm.patientservice.exception.PatientNotFoundException;
 import com.pm.patientservice.model.Patient;
 import com.pm.patientservice.repository.PatientRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -53,7 +54,7 @@ public class PatientService {
                 () -> new PatientNotFoundException("Patient not found with ID: " + id));
 
 
-        if (patientRepository.existsByEmail(patientRequestDTO.getEmail())) {
+        if (patientRepository.existsByEmailAndIdNot(patientRequestDTO.getEmail(), id)) {
             throw new EmailAlreadyExistsException(" A patient with the email "
                     + patientRequestDTO.getEmail() + " already exists.");
         }
@@ -66,5 +67,10 @@ public class PatientService {
         Patient updatedPatient = patientRepository.save(patient);
 
         return PatientMapper.toDTO(updatedPatient);
+    }
+
+
+    public void deletePatient(UUID id) {
+        patientRepository.deleteById(id);
     }
 }
