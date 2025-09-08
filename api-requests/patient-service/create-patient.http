@@ -3,9 +3,9 @@ POST http://localhost:4000/patients
 Content-Type: application/json
 
 {
-  "name": "Project Grind",
-  "email": "example@gmail.com",
-  "address": "123 Main Street, New York",
+  "name": "Test Patient2 with billing account",
+  "email": "test_billingAccount2@gmail.com",
+  "address": "1235 Main Street, New York",
   "dateOfBirth": "1999-12-09",
   "registeredDate": "2025-11-02"
 }
