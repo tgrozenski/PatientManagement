@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  kafka:
+    image: bitnami/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+      - "9094:9094"
+    environment:
+      - KAFKA_CFG_NODE_ID=0
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@kafka:9093
+    networks:
+      - internal
+
+  patient-service-db:
+    image: postgres
+    container_name: patient-service-db
+    ports:
+      - "5000:5432"
+    environment:
+      - POSTGRES_USER=admin_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    volumes:
+      - patient-service-db-data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  billing-service:
+    build:
+      context: ./billing-service
+    container_name: billing-service
+    ports:
+      - "4001:4001"
+      - "9001:9001"
+    depends_on:
+      - kafka
+    networks:
+      - internal
+
+  patient-service:
+    build:
+      context: ./patient-service
+    container_name: patient-service
+    ports:
+      - "4000:4000"
+    environment:
+      - BILLING_SERVICE_ADDRESS=billing-service
+      - BILLING_SERVICE_GRPC_PORT=9001
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://patient-service-db:5432/db
+      - SPRING_DATASOURCE_USERNAME=admin_user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_SQL_INIT_MODE=always
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+    depends_on:
+      - patient-service-db
+      - kafka
+    networks:
+      - internal
+
+  analytics-service:
+    build:
+      context: ./analytics-service
+    container_name: analytics-service
+    ports:
+      - "4002:4002"
+    environment:
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+
+volumes:
+  patient-service-db-data:
