@@ -77,10 +77,49 @@ services:
       - kafka
     networks:
       - internal
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "4004:4004"
+    networks:
+      - internal
 
+  auth-service-db:
+    image: postgres
+    container_name: auth-service-db
+    ports:
+      - "5001:5432"
+    environment:
+      - POSTGRES_USER=admin_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=db
+    volumes:
+      - auth-service-db-data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  auth-service:
+    build:
+      context: ./auth-service
+    container_name: auth-service
+    ports:
+      - "4005:4005"
+    environment:
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://auth-service-db:5432/db
+      - SPRING_DATASOURCE_USERNAME=admin_user
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_SQL_INIT_MODE=always
+    depends_on:
+      - auth-service-db
+    networks:
+      - internal
 networks:
   internal:
     driver: bridge
 
 volumes:
   patient-service-db-data:
+  auth-service-db-data:
