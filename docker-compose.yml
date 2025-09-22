@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   kafka:
     image: bitnami/kafka
@@ -104,14 +102,13 @@ services:
     build:
       context: ./auth-service
     container_name: auth-service
-    ports:
-      - "4005:4005"
     environment:
       - SPRING_DATASOURCE_PASSWORD=password
       - SPRING_DATASOURCE_URL=jdbc:postgresql://auth-service-db:5432/db
       - SPRING_DATASOURCE_USERNAME=admin_user
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_SQL_INIT_MODE=always
+      - JWT_SECRET=eW91ci1zdXBlci1zZWNyZXQta2V5LXRoYXQtaXMtbG9uZy1hbmQtc2VjdXJlCg== # A valid Base64 encoded secret
     depends_on:
       - auth-service-db
     networks:
