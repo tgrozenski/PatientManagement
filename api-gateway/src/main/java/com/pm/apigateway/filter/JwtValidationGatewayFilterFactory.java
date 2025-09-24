@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Component
-public class JwtValidationFilterFactory extends AbstractGatewayFilterFactory<Object> {
+public class JwtValidationGatewayFilterFactory extends AbstractGatewayFilterFactory<Object> {
 
     private final WebClient webClient;
 
-    public JwtValidationFilterFactory(WebClient.Builder webClientBuilder,
-        @Value("${auth.service.url}") String authServiceUrl) {
+    public JwtValidationGatewayFilterFactory(WebClient.Builder webClientBuilder,
+                                             @Value("${auth.service.url}") String authServiceUrl) {
 
         this.webClient = webClientBuilder.baseUrl(authServiceUrl).build();
     }
