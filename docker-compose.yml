@@ -110,7 +110,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=admin_user
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_SQL_INIT_MODE=always
-      - JWT_SECRET=eW91ci1zdXBlci1zZWNyZXQta2V5LXRoYXQtaXMtbG9uZy1hbmQtc2VjdXJlCg== # A valid Base64 encoded secret
+      - JWT_SECRET=eW91ci1zdXBlci1zZWNyZXQta2V5LXRoYXQtaXMtbG9uZy1hbmQtc2VjdXJlCg==
     depends_on:
       - auth-service-db
     networks:
