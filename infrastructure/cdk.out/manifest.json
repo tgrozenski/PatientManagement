@@ -275,16 +275,16 @@
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "Kernel._Kernel_create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:548:25)",
-              "Kernel.create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:218:93)",
-              "KernelHost.processRequest (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15479:36)",
-              "KernelHost.run (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15440:45)",
-              "process.processImmediate (node:internal/timers:505:21)"
+              "Annotations.addMessage (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15440:45)",
+              "process.processImmediate (node:internal/timers:485:21)"
             ]
           }
         ],
@@ -300,184 +300,293 @@
             "data": "AuthServiceSecurityGroup67F2FA7D"
           }
         ],
-        "/localstack/Billing ServiceTask/TaskRole/Resource": [
+        "/localstack/BillingServiceTask/TaskRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceTaskTaskRole925C6B6D"
+            "data": "BillingServiceTaskTaskRole7A547BBF"
           }
         ],
-        "/localstack/Billing ServiceTask/Resource": [
+        "/localstack/BillingServiceTask/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceTask33D5E6D6"
+            "data": "BillingServiceTask30D9C66E"
           }
         ],
-        "/localstack/Billing ServiceTask/ExecutionRole/Resource": [
+        "/localstack/BillingServiceTask/ExecutionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceTaskExecutionRole28CC6E20"
+            "data": "BillingServiceTaskExecutionRole11FE8DE2"
           }
         ],
-        "/localstack/Billing ServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+        "/localstack/BillingServiceTask/ExecutionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceTaskExecutionRoleDefaultPolicyAE906362"
+            "data": "BillingServiceTaskExecutionRoleDefaultPolicy4F4033C9"
           }
         ],
-        "/localstack/Billing ServiceLogGroup/Resource": [
+        "/localstack/BillingServiceLogGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceLogGroup84300498"
+            "data": "BillingServiceLogGroupDD61E740"
           }
         ],
-        "/localstack/Billing Service": [
+        "/localstack/BillingService": [
           {
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "Kernel._Kernel_create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:548:25)",
-              "Kernel.create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:218:93)",
-              "KernelHost.processRequest (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15479:36)",
-              "KernelHost.run (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15440:45)",
-              "process.processImmediate (node:internal/timers:505:21)"
+              "Annotations.addMessage (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15440:45)",
+              "process.processImmediate (node:internal/timers:485:21)"
             ]
           }
         ],
-        "/localstack/Billing Service/Service": [
+        "/localstack/BillingService/Service": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceD35A33F9"
+            "data": "BillingServiceFEB36D90"
           }
         ],
-        "/localstack/Billing Service/SecurityGroup/Resource": [
+        "/localstack/BillingService/SecurityGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "BillingServiceSecurityGroupE48BF672"
+            "data": "BillingServiceSecurityGroup3783AD35"
           }
         ],
-        "/localstack/Analytics ServiceTask/TaskRole/Resource": [
+        "/localstack/AnalyticsServiceTask/TaskRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceTaskTaskRoleB54B769C"
+            "data": "AnalyticsServiceTaskTaskRole1ABB10CB"
           }
         ],
-        "/localstack/Analytics ServiceTask/Resource": [
+        "/localstack/AnalyticsServiceTask/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceTask9CDB87AA"
+            "data": "AnalyticsServiceTaskC3AFBC47"
           }
         ],
-        "/localstack/Analytics ServiceTask/ExecutionRole/Resource": [
+        "/localstack/AnalyticsServiceTask/ExecutionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceTaskExecutionRoleE7098945"
+            "data": "AnalyticsServiceTaskExecutionRoleBAF654B2"
           }
         ],
-        "/localstack/Analytics ServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+        "/localstack/AnalyticsServiceTask/ExecutionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceTaskExecutionRoleDefaultPolicy9369F73C"
+            "data": "AnalyticsServiceTaskExecutionRoleDefaultPolicy99868928"
           }
         ],
-        "/localstack/Analytics ServiceLogGroup/Resource": [
+        "/localstack/AnalyticsServiceLogGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceLogGroup5172E75D"
+            "data": "AnalyticsServiceLogGroupBD82F12A"
           }
         ],
-        "/localstack/Analytics Service": [
+        "/localstack/AnalyticsService": [
           {
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "Kernel._Kernel_create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:548:25)",
-              "Kernel.create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:218:93)",
-              "KernelHost.processRequest (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15479:36)",
-              "KernelHost.run (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15440:45)",
-              "process.processImmediate (node:internal/timers:505:21)"
+              "Annotations.addMessage (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15440:45)",
+              "process.processImmediate (node:internal/timers:485:21)"
             ]
           }
         ],
-        "/localstack/Analytics Service/Service": [
+        "/localstack/AnalyticsService/Service": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsService01856314"
+            "data": "AnalyticsServiceCD38C492"
           }
         ],
-        "/localstack/Analytics Service/SecurityGroup/Resource": [
+        "/localstack/AnalyticsService/SecurityGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AnalyticsServiceSecurityGroupAB1C2C42"
+            "data": "AnalyticsServiceSecurityGroupBA6AE98A"
           }
         ],
-        "/localstack/Patient ServiceTask/TaskRole/Resource": [
+        "/localstack/PatientServiceTask/TaskRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceTaskTaskRole229DF035"
+            "data": "PatientServiceTaskTaskRole4FB5B4E2"
           }
         ],
-        "/localstack/Patient ServiceTask/Resource": [
+        "/localstack/PatientServiceTask/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceTaskDF72A2CC"
+            "data": "PatientServiceTaskF865B565"
           }
         ],
-        "/localstack/Patient ServiceTask/ExecutionRole/Resource": [
+        "/localstack/PatientServiceTask/ExecutionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceTaskExecutionRoleD791C195"
+            "data": "PatientServiceTaskExecutionRole3782903B"
           }
         ],
-        "/localstack/Patient ServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+        "/localstack/PatientServiceTask/ExecutionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceTaskExecutionRoleDefaultPolicy6B8257C1"
+            "data": "PatientServiceTaskExecutionRoleDefaultPolicy3866E91E"
           }
         ],
-        "/localstack/Patient ServiceLogGroup/Resource": [
+        "/localstack/PatientServiceLogGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceLogGroup467A8504"
+            "data": "PatientServiceLogGroup4A5C3809"
           }
         ],
-        "/localstack/Patient Service": [
+        "/localstack/PatientService": [
           {
             "type": "aws:cdk:warning",
             "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
             "trace": [
-              "Annotations.addMessage (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
-              "Annotations.addWarningV2 (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
-              "new BaseService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
-              "new FargateService (/tmp/jsii-kernel-Nt3gJ7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
-              "Kernel._Kernel_create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:548:25)",
-              "Kernel.create (/tmp/jsii-java-runtime954739609667273331/lib/program.js:218:93)",
-              "KernelHost.processRequest (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15479:36)",
-              "KernelHost.run (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15439:22)",
-              "Immediate._onImmediate (/tmp/jsii-java-runtime954739609667273331/lib/program.js:15440:45)",
-              "process.processImmediate (node:internal/timers:505:21)"
+              "Annotations.addMessage (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15440:45)",
+              "process.processImmediate (node:internal/timers:485:21)"
             ]
           }
         ],
-        "/localstack/Patient Service/Service": [
+        "/localstack/PatientService/Service": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientService604C2628"
+            "data": "PatientServiceA65AB800"
           }
         ],
-        "/localstack/Patient Service/SecurityGroup/Resource": [
+        "/localstack/PatientService/SecurityGroup/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PatientServiceSecurityGroup009DAA64"
+            "data": "PatientServiceSecurityGroup547BE1F2"
+          }
+        ],
+        "/localstack/APIGatewayTaskDefinition/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionTaskRole894A199F"
+          }
+        ],
+        "/localstack/APIGatewayTaskDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinition199BB1B7"
+          }
+        ],
+        "/localstack/APIGatewayTaskDefinition/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionExecutionRole555CBA21"
+          }
+        ],
+        "/localstack/APIGatewayTaskDefinition/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionExecutionRoleDefaultPolicy582C1C35"
+          }
+        ],
+        "/localstack/ApiGatewayLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayLogGroupA9770429"
+          }
+        ],
+        "/localstack/APIGatewayService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBDA2B7609"
+          }
+        ],
+        "/localstack/APIGatewayService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBSecurityGroup8524BFD1"
+          }
+        ],
+        "/localstack/APIGatewayService/LB/SecurityGroup/to localstackAPIGatewayServiceSecurityGroup37054EEE:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBSecurityGrouptolocalstackAPIGatewayServiceSecurityGroup37054EEE4004CAF8FB32"
+          }
+        ],
+        "/localstack/APIGatewayService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBPublicListenerD6FA7F47"
+          }
+        ],
+        "/localstack/APIGatewayService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70"
+          }
+        ],
+        "/localstack/APIGatewayService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLoadBalancerDNS7C7318A3"
+          }
+        ],
+        "/localstack/APIGatewayService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceServiceURL95056890"
+          }
+        ],
+        "/localstack/APIGatewayService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-kernel-fx8Jj7/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:548:25)",
+              "Kernel.create (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:218:93)",
+              "KernelHost.processRequest (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15479:36)",
+              "KernelHost.run (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15439:22)",
+              "Immediate._onImmediate (/private/var/folders/wp/bnytqqt96n36wrjx4q0cqcth0000gn/T/jsii-java-runtime8360773202794714184/lib/program.js:15440:45)",
+              "process.processImmediate (node:internal/timers:485:21)"
+            ]
+          }
+        ],
+        "/localstack/APIGatewayService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceA5206149"
+          }
+        ],
+        "/localstack/APIGatewayService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceSecurityGroup98F3B93B"
+          }
+        ],
+        "/localstack/APIGatewayService/Service/SecurityGroup/from localstackAPIGatewayServiceLBSecurityGroup32B4CA42:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceSecurityGroupfromlocalstackAPIGatewayServiceLBSecurityGroup32B4CA424004CA85E4CD"
           }
         ]
       },
