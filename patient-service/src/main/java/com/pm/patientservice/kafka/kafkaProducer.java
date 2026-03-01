@@ -4,10 +4,12 @@ import com.pm.patientservice.model.Patient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import patient.events.PatientEvent;
+import java.util.function.BiConsumer;
 
-@Service // Tells spring to dependency inject here
+@Service
 public class kafkaProducer {
     private static final Logger log = LoggerFactory.getLogger(kafkaProducer.class);
     private final KafkaTemplate<String, byte[]> kafkaTemplate;
@@ -24,11 +26,18 @@ public class kafkaProducer {
                 .setEventType("PATIENT_CREATED")
                 .build();
 
-        try {
-            kafkaTemplate.send("patient", event.toByteArray());
-        } catch (Exception e){
-            log.error("Error sending Patient created event: {}", event);
-        }
+        kafkaTemplate.send("patient", event.toByteArray())
+            .whenComplete(new BiConsumer<SendResult<String, byte[]>, Throwable>() {
+                @Override
+                public void accept(SendResult<String, byte[]> result, Throwable ex) {
+                    if (ex == null) {
+                        log.info("Successfully sent patient event to Kafka: patientId={}", patient.getId());
+                    } else {
+                        log.error("Failed to send patient event to Kafka: patientId={}, error={}", 
+                            patient.getId(), ex.getMessage());
+                        throw new RuntimeException("Kafka send failed", ex);
+                    }
+                }
+            });
     }
-
 }

@@ -1,0 +1,9 @@
+com/pm/auditservice/AuditServiceApplication.class
+patient/events/PatientEvent$Builder.class
+patient/events/PatientEvent$1.class
+patient/events/PatientEventOuterClass.class
+patient/events/PatientEvent.class
+patient/events/PatientEventOrBuilder.class
+com/pm/auditservice/kafka/KafkaConsumer.class
+com/pm/auditservice/repository/AuditRepository.class
+com/pm/auditservice/model/AuditEvent.class

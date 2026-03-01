@@ -75,6 +75,53 @@ services:
       - kafka
     networks:
       - internal
+
+  notification-service:
+    build:
+      context: ./notification-service
+    container_name: notification-service
+    ports:
+      - "4003:4003"
+    environment:
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - internal
+
+  audit-service-db:
+    image: postgres
+    container_name: audit-service-db
+    ports:
+      - "5002:5432"
+    environment:
+      - POSTGRES_USER=admin_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=audit_db
+    volumes:
+      - audit-service-db-data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  audit-service:
+    build:
+      context: ./audit-service
+    container_name: audit-service
+    ports:
+      - "4006:4006"
+    environment:
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://audit-service-db:5432/audit_db
+      - SPRING_DATASOURCE_USERNAME=admin_user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+      - SPRING_SQL_INIT_MODE=always
+    depends_on:
+      - audit-service-db
+      - kafka
+    networks:
+      - internal
+
   api-gateway:
     build:
       context: ./api-gateway
@@ -122,3 +169,4 @@ networks:
 volumes:
   patient-service-db-data:
   auth-service-db-data:
+  audit-service-db-data:

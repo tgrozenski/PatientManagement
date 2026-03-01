@@ -1,0 +1,7 @@
+com/pm/notificationservice/NotificationServiceApplication.class
+com/pm/notificationservice/kafka/KafkaConsumer.class
+patient/events/PatientEvent$Builder.class
+patient/events/PatientEvent$1.class
+patient/events/PatientEventOuterClass.class
+patient/events/PatientEvent.class
+patient/events/PatientEventOrBuilder.class
